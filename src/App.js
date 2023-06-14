@@ -4,20 +4,17 @@ import UserOutput from './UserOutput';
 import './App.css';
 
 const App = () => {
-  const [usernames, setUsernames] = useState([]);
+  const [username, setUsername] = useState('John');
 
-  const handleInputSubmit = (newUsername) => {
-    setUsernames([...usernames, newUsername]);
+  const usernameChangedHandler = (event) => {
+    setUsername(event.target.value);
   };
 
   return (
     <div className="app">
-      <h1>Input your details below:</h1>
-      <UserInput onInputSubmit={handleInputSubmit} />
-
-      {usernames.map((username, index) => (
-        <UserOutput key={index} username={username} />
-      ))}
+      <h1>User Output:</h1>
+      <UserInput change={usernameChangedHandler} username={username} />
+      <UserOutput username={username} />
     </div>
   );
 };

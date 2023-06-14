@@ -1,9 +1,14 @@
 .app {
   text-align: center;
+  margin-top: 20px;
 }
 
-h1 {
-  color: #1b6e85;
-  font-size: 24px;
-  margin-bottom: 20px;
+input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+p {
+  font-size: 18px;
+  margin-bottom: 10px;
 }
